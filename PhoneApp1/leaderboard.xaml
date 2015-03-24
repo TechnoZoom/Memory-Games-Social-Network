@@ -17,7 +17,7 @@
     <Grid x:Name="LayoutRoot"
           Margin="0,-2,0,2">
     	<Grid.Background>
-    		<ImageBrush Stretch="Fill" ImageSource="bg_bg.png"/>
+    		<ImageBrush Stretch="Fill" ImageSource="images/bg_bg.png"/>
     	</Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

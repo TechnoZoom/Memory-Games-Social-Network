@@ -19,7 +19,7 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
     	<Grid.Background>
-    		<ImageBrush Stretch="Fill" ImageSource="/r.jpg"/>
+    		<ImageBrush Stretch="Fill" ImageSource="/images/r.jpg"/>
     	</Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

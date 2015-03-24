@@ -418,7 +418,7 @@
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
             <ImageBrush Stretch="Fill"
-                        ImageSource="sky-blue-circular-swirl-shiny-background_293-948.jpg" />
+                        ImageSource="images/sky-blue-circular-swirl-shiny-background_293-948.jpg" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
