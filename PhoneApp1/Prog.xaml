@@ -1,0 +1,162 @@
+﻿<phone:PhoneApplicationPage x:Class="PhoneApp1.Page1"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            mc:Ignorable="d"
+                            shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel"
+              Margin="10,78,14,-78"
+              Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="53*" />
+                <ColumnDefinition Width="61*" />
+            </Grid.ColumnDefinitions>
+
+
+
+
+            <TextBlock Margin="22,224,74,0"
+                       TextWrapping="Wrap"
+                       Text="UserName :- "
+                       VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="22,275,0,0"
+                       TextWrapping="Wrap"
+                       Text="Level 1 Highest score :- "
+                       VerticalAlignment="Top"
+                       Grid.ColumnSpan="2" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="22,320,0,0"
+                       TextWrapping="Wrap"
+                       Text="Level 2 Highest Score:- "
+                       VerticalAlignment="Top"
+                       Grid.ColumnSpan="2" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="22,363,0,0"
+                       TextWrapping="Wrap"
+                       Text="Level 3 Highest Score:- "
+                       VerticalAlignment="Top"
+                       Grid.ColumnSpan="2" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="21,411,0,0"
+                       TextWrapping="Wrap"
+                       Text="Highest Time Spent on Level 1"
+                       VerticalAlignment="Top"
+                       Grid.ColumnSpan="2" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="108,411,0,0"
+                       TextWrapping="Wrap"
+                       Name="ht_lvl_1"
+                       Text="lvl_ht"
+                       VerticalAlignment="Top"
+                       Grid.Column="1" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="21,455,0,0"
+                       TextWrapping="Wrap"
+                       Text="Highest Time Spent on Level 2"
+                       VerticalAlignment="Top"
+                       Grid.ColumnSpan="2" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="108,455,0,0"
+                       TextWrapping="Wrap"
+                       Name="ht_lvl_2"
+                       Text="lvl2_ht"
+                       VerticalAlignment="Top"
+                       Grid.Column="1" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="21,499,0,0"
+                       TextWrapping="Wrap"
+                       Text="Highest Time Spent on Level 3"
+                       VerticalAlignment="Top"
+                       Grid.ColumnSpan="2" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="108,499,0,0"
+                       TextWrapping="Wrap"
+                       Text="lvl3_ht"
+                       Name="ht_lvl_3"
+                       VerticalAlignment="Top"
+                       Grid.Column="1" />
+            <Image HorizontalAlignment="Left"
+                   Height="207"
+                   Name="user_image"
+                   Margin="8,12,0,0"
+                   VerticalAlignment="Top"
+                   Width="221"
+                   Grid.ColumnSpan="2" />
+
+
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="174,226,0,0"
+                       TextWrapping="Wrap"
+                       Text="Name"
+                       Name="pl_name_prog"
+                       VerticalAlignment="Top"
+                       Grid.ColumnSpan="2"
+                       Width="96" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="57,275,0,0"
+                       Name="l_1_sc"
+                       TextWrapping="Wrap"
+                       Text="Lvl 1 score"
+                       VerticalAlignment="Top"
+                       Grid.Column="1" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="57,320,0,0"
+                       TextWrapping="Wrap"
+                       Text="Lvl 2 score"
+                       Name="l_2_sc"
+                       VerticalAlignment="Top"
+                       Grid.Column="1" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="57,363,0,0"
+                       TextWrapping="Wrap"
+                       Text="Lvl 3 score"
+                       Name="l_3_sc"
+                       VerticalAlignment="Top"
+                       Grid.Column="1" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="28,39,0,0"
+                       x:Name="l_1_sc_Copy"
+                       TextWrapping="Wrap"
+                       Text="Rank"
+                       VerticalAlignment="Top"
+                       Height="65"
+                       Width="102"
+                       FontSize="40"
+                       Grid.Column="1" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="136,41,0,0"
+                       x:Name="rank_dat"
+                       TextWrapping="Wrap"
+                       Text="Rank"
+                       VerticalAlignment="Top"
+                       Height="65"
+                       Width="102"
+                       FontSize="40"
+                       Grid.Column="1" />
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

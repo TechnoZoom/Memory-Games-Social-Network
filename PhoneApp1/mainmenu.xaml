@@ -1,0 +1,203 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                            xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+                            x:Class="PhoneApp1.mainmenu"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            mc:Ignorable="d"
+                            shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0"
+                    Margin="0,0,0,622" Grid.RowSpan="2">
+        	<StackPanel.Background>
+        		<ImageBrush Stretch="Fill" ImageSource="1_136.jpg"/>
+        	</StackPanel.Background>
+            <TextBlock x:Name="game"
+                       Margin="7,-7,2,0"
+                       Style="{StaticResource PhoneTextTitle1Style}"
+                       FontSize="34.667"
+                       TextWrapping="Wrap"
+                       Height="79"
+                       Text="REFLEXES + MEMORY GAME"
+                       FontWeight="Bold">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+                    	<GradientStop Color="#FF00FFF9"
+                    		Offset="0.373" />
+                    	<GradientStop Color="Yellow"
+                    		Offset="0.609" />
+                    	<GradientStop Color="Red"
+                    		Offset="0.484" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel"
+              Margin="0,50,0,0"
+              Grid.RowSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="memory.jpg" />
+            </Grid.Background>
+            <TextBlock x:Name="Mainmenu"
+                       HorizontalAlignment="Left"
+                       Margin="69,16,0,0"
+                       TextWrapping="Wrap"
+                       Text="Main Menu"
+                       VerticalAlignment="Top"
+                       FontSize="64"
+                       FontWeight="Bold">
+            	<TextBlock.Foreground>
+            		<RadialGradientBrush SpreadMethod="Reflect">
+            			<GradientStop Color="Red" Offset="1"/>
+            			<GradientStop Color="#FFCD1D00" Offset="0.688"/>
+            		</RadialGradientBrush>
+            	</TextBlock.Foreground>
+            </TextBlock>
+            <Button x:Name="level1"
+                    Content="Level 1"
+                    HorizontalAlignment="Left"
+                    Margin="20,148,0,0"
+                    VerticalAlignment="Top"
+                    Foreground="Yellow"
+                    Background="Transparent"
+                    Click="lvel1"
+                    BorderBrush="Transparent"
+                    FontWeight="Bold"
+                    FontSize="32" />
+            <Button x:Name="level2"
+                    Content="Level 3"
+                    HorizontalAlignment="Left"
+                    Margin="293,147,0,0"
+                    VerticalAlignment="Top"
+                    Foreground="Yellow"
+                    Click="lvel2"
+                    BorderBrush="Transparent"
+                    FontWeight="Bold"
+                    FontSize="32" />
+            <Button x:Name="inst"
+                    Content="Instructions"
+                    HorizontalAlignment="Left"
+                    Margin="138,220,0,0"
+                    Click="ins"
+                    VerticalAlignment="Top"
+                    Foreground="#FFCB1200"
+                    FontSize="29.333"
+                    FontWeight="Bold"
+                    BorderBrush="Transparent" />
+            <Button x:Name="about"
+                    Content="About"
+                    HorizontalAlignment="Left"
+                    Margin="172,353,0,0"
+                    VerticalAlignment="Top"
+                    Click="abt"
+                    Foreground="#FFCB1200"
+                    FontSize="29.333"
+                    FontWeight="Bold"
+                    BorderBrush="Transparent" />
+            <Button x:Name="level_3"
+                    Content="Level 2"
+                    HorizontalAlignment="Left"
+                    Margin="160,148,0,0"
+                    Click="lvl2_2"
+                    VerticalAlignment="Top"
+                    BorderBrush="Transparent"
+                    Foreground="Yellow"
+                    FontSize="32"
+                    FontWeight="Bold" />
+            <Button x:Name="progre"
+                    Content="Progress"
+                    HorizontalAlignment="Left"
+                    Margin="148,289,0,0"
+                    Click="prog_handler"
+                    VerticalAlignment="Top"
+                    Foreground="#FFCB1200"
+                    FontSize="29.333"
+                    FontWeight="Bold"
+                    BorderBrush="Transparent" />
+            <Button x:Name="signout"
+                    Content="Sign Out"
+                    HorizontalAlignment="Left"
+                    Margin="160,417,0,0"
+                    VerticalAlignment="Top"
+                    Click="signout_hand"
+                    Foreground="#FFCB1200"
+                    FontSize="29.333"
+                    FontWeight="Bold"
+                    BorderBrush="Transparent" />
+            <Button x:Name="ledr"
+                    Content="Leaderboard"
+                    HorizontalAlignment="Left"
+                    Margin="134,547,0,0"
+                    VerticalAlignment="Top"
+                    Click="Leader_click"
+                    Foreground="#FFCB1200"
+                    FontSize="29.333"
+                    FontWeight="Bold"
+                    BorderBrush="Transparent" />
+            <Button x:Name="badg"
+                    Content="Badges"
+                    HorizontalAlignment="Left"
+                    Margin="164,479,0,0"
+                    VerticalAlignment="Top"
+                    Click="badg_nav"
+                    Foreground="#FFCB1200"
+                    FontSize="29.333"
+                    FontWeight="Bold"
+                    BorderBrush="Transparent" />
+
+        </Grid>
+    </Grid>
+
+
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsMenuEnabled="True"
+                              IsVisible="True"
+                              BackgroundColor="Black"
+                              ForegroundColor="White">
+            <shell:ApplicationBarIconButton Click="contact"
+                                            IconUri="/images/mail.png"
+                                            Text="Contact us" />
+            <shell:ApplicationBarIconButton Click="favs"
+                                            IconUri="/images/favs.png"
+                                            Text="Rate" />
+
+            <shell:ApplicationBarIconButton Click="mor"
+                                            IconUri="/images/more.png"
+                                            Text="more apps" />
+            
+            
+
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+
+</phone:PhoneApplicationPage>
+
+
+
+
+
